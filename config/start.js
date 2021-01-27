@@ -1,7 +1,7 @@
 /*
  * @Author: Lucas
  * @Date: 2021-01-13 17:20:02
- * @LastEditTime: 2021-01-27 14:59:01
+ * @LastEditTime: 2021-01-27 17:53:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /choerodon-front-agile/Users/mory/Desktop/qiankun-react/config/start.js
@@ -14,6 +14,8 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
+
+const startExec = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'Ex' : 'xdg-open');
 /**
  * @description: 找到目录
  */
@@ -36,7 +38,7 @@ function start() {
     console.log(i, 'success', stdout)
     console.error(i, 'error', stderr)
   });
-  // exec('start http://localhost:6650/');
+  exec(`${startExec} http://localhost:6650/`);
 };
 start();
 

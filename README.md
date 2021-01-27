@@ -1,7 +1,7 @@
 <!--
  * @Author: Lucas
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-27 15:13:00
+ * @LastEditTime: 2021-01-27 16:00:11
  * @LastEditors: Please set LastEditors
  * @Description: react 微前端
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/README.md
@@ -9,6 +9,11 @@
 
 # react 微前端
 
+## 环境
+
+  node v12.18.3
+
+  npm 6.10.3
 ## 描述
 
   基于 [qiankun](https://qiankun.umijs.org/zh) 的微前端项目，技术栈为react

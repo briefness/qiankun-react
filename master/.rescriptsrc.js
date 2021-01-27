@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 12:03:15
- * @LastEditTime: 2021-01-27 14:53:36
+ * @LastEditTime: 2021-01-27 17:06:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/children/react2/.rescriptsrc.js
