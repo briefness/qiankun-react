@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-27 14:08:18
+ * @LastEditTime: 2021-01-28 16:29:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/src/index.js
@@ -12,10 +12,7 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import { registerMicroApps, start } from 'qiankun';
-
 import { setDefaultMountApp } from './utils';
-
-import { initGlobalState } from './utils/globalState';
 
 function render({ appContent, loading }) {
   const container = document.getElementById('root');
@@ -30,7 +27,6 @@ render({ loading: true });
 function genActiveRule(routerPrefix) {
   return location => location.pathname.startsWith(routerPrefix);
 }
-
 /**
  * Step2 注册子应用
  * entry： 为微应用的访问地址
@@ -40,7 +36,7 @@ registerMicroApps([
     name: 'react1',
     entry: '//localhost:6651',
     render,
-    activeRule: genActiveRule('/react1')
+    activeRule: genActiveRule('/react1'),
   },
   {
     name: 'react2',
@@ -49,20 +45,6 @@ registerMicroApps([
     activeRule: genActiveRule('/react2') 
   },
 ]);
-
-const { onGlobalStateChange, setGlobalState } = initGlobalState({
-  user: 'qiankun',
-});
-
-onGlobalStateChange((value, prev) => console.log('[onGlobalStateChange - master]:', value, prev));
-
-setGlobalState({
-  ignore: 'master',
-  user: {
-    name: 'master',
-  },
-});
-
 /**
  * Step3 设置默认进入的子应用
  */

@@ -1,7 +1,7 @@
 <!--
  * @Author: Lucas
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-27 16:00:11
+ * @LastEditTime: 2021-01-28 16:40:34
  * @LastEditors: Please set LastEditors
  * @Description: react 微前端
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/README.md
@@ -17,6 +17,8 @@
 ## 描述
 
   基于 [qiankun](https://qiankun.umijs.org/zh) 的微前端项目，技术栈为react
+
+  通过 [@ice/stark-data](https://ice.work/docs/icestark/guide/interaction) 做为应用之间的通信 
 
 ## 运行
 
