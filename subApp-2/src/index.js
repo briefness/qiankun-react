@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-12 13:34:23
+ * @LastEditTime: 2021-01-29 14:35:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/children/react2/src/index.js
@@ -27,5 +27,5 @@ export async function mount(props) {
 }
 export async function unmount(props) {
   const { container } = props;
-  ReactDOM.unmountComponentAtNode(container ? container.querySelector('#root') : document.querySelector('#root'));
+  ReactDOM.unmountComponentAtNode(container ? container.querySelector('#sub-root-2') : document.querySelector('#sub-root-2'));
 }

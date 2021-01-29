@@ -1,17 +1,16 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-28 16:28:40
+ * @LastEditTime: 2021-01-29 14:53:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/src/App.js
  */
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+import RouteIndex from './router';
 import { store } from '@ice/stark-data';
-import './App.css';
 
 function App(props) {
-
   const { content, loading } = props;
   
   useEffect(() => {
@@ -22,9 +21,9 @@ function App(props) {
   function goto(title, href) {
     window.history.pushState({}, title, href);
   }
-  
+
   return (
-    <div className="App" style={{ display: 'flex' }}>
+    !content ? <RouteIndex /> : <div className="App" style={{ display: 'flex' }}>
       <div style={{ width: 100 }}>
         <div>这里是 Menu </div>
         <button onClick={() => goto('react1', '/react1')}>react1</button>

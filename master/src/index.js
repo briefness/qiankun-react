@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-28 16:29:03
+ * @LastEditTime: 2021-01-29 15:16:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/src/index.js
@@ -12,6 +12,7 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import { registerMicroApps, start } from 'qiankun';
+// import { store } from '@ice/stark-data';
 import { setDefaultMountApp } from './utils';
 
 function render({ appContent, loading }) {
@@ -27,6 +28,7 @@ render({ loading: true });
 function genActiveRule(routerPrefix) {
   return location => location.pathname.startsWith(routerPrefix);
 }
+
 /**
  * Step2 注册子应用
  * entry： 为微应用的访问地址
@@ -45,6 +47,7 @@ registerMicroApps([
     activeRule: genActiveRule('/react2') 
   },
 ]);
+
 /**
  * Step3 设置默认进入的子应用
  */

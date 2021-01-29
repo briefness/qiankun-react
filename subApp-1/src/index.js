@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-12 10:42:07
- * @LastEditTime: 2021-01-28 16:38:08
+ * @LastEditTime: 2021-01-29 14:34:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-test/Users/mory/Desktop/qiankun-react/children/react2/src/index.js
@@ -13,7 +13,7 @@ import './public-path';
 import App from './App';
 function render(props) {
   const { container } = props;
-  ReactDOM.render(<App {...props} />, container ? container.querySelector('#root') : document.querySelector('#root'));
+  ReactDOM.render(<App {...props} />, container ? container.querySelector('#sub-root-1') : document.querySelector('#sub-root-1'));
 }
 
 /**
